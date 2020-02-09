@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author Alessandro Arosio - 09/02/2020 10:35
  */
+@Deprecated //use ItemMapper
 @Component
 public class ItemConverter implements Converter<Item, ItemDto> {
 

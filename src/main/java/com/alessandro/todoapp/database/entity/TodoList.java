@@ -1,6 +1,9 @@
 package com.alessandro.todoapp.database.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -12,6 +15,9 @@ import java.util.List;
 @Entity
 @Table(name = "TODO_LIST")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class TodoList {
 
     @Id

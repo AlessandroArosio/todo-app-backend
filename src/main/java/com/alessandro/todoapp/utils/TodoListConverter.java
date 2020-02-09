@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 /**
  * @author Alessandro Arosio - 09/02/2020 10:41
  */
+@Deprecated // use TodoListMapper
 @Component
 @RequiredArgsConstructor
 public class TodoListConverter implements Converter<TodoList, TodoListDto> {

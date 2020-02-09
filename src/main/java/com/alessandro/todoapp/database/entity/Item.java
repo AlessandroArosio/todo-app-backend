@@ -1,6 +1,9 @@
 package com.alessandro.todoapp.database.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -10,6 +13,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TODO_ITEM")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Item {
 
     @Id

@@ -2,7 +2,7 @@ package com.alessandro.todoapp.services;
 
 import com.alessandro.todoapp.database.repository.ListRepository;
 import com.alessandro.todoapp.dto.TodoListDto;
-import com.alessandro.todoapp.utils.TodoListConverter;
+import com.alessandro.todoapp.utils.mappers.TodoListMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,14 +15,13 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class TodoServiceImpl implements TodoService {
-    private final TodoListConverter todoListConverter;
     private final ListRepository listRepository;
+    private final TodoListMapper todoListMapper;
 
     public List<TodoListDto> getTodoListDto() {
         return listRepository.findAll()
                 .stream()
-                .map(todoListConverter::convert)
+                .map(todoListMapper::todoListToDto)
                 .collect(Collectors.toList());
     }
-
 }
